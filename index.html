@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-  <!-- boot 스트랩 이용 하는 부분 .-->
-  <title>Github Finder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Github Finder</title> <!-- github 연결과 title 부분 . 위의 실제 link가  bootstrap 연결-->
 </head>
 <body>
-  <nav class="navbar bg-primary" data-bs-theme="dark" >
-    <div class="container">
-        <a href="#" class="navbar-brand">Github Finder</a> <!--링크를 비워 두기 위해서 a태그에 #값 저장 =void-->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2672FF;" > <!-- 앞에 navbar navbar -expand -lg navbar-dark 등등은 bootstrap 공식문서-->
+        <div class="container">
+            <a href="#" class="navbar-brand">Github Finder</a>
+        </div> <!-- 여기서 헷갈렸던점이 sematic tag에서 header와 nav중 무엇을 써야할까 계속 헷갈렸는데,  거의 비슷한거 같다는 결론을 내렸다-->
+    </nav>
+
+    <div class="SearchContainer">
+        <div class="search card card-body bg-light"> <!--부트스트랩 속성을 class 이름으로 매겨주는 부분이다.-->
+            <h1 class="title">Search Github Users</h1>
+            <p class="description">Enter a username to fetch user profile and repos</p>
+            <input type="text" id="searchUser" class="form-control" placeholder="Github username...">
+            <br>
+            <button id="searchBtn" class="btn text-white" style="background-color: #2672FF;">Search</button> <!-- 기본적으로 button에 관해서 사용한 부분-->
+        </div>
+        <br>
+        <div id="profile"></div> <!--profile을 위해서  화면 구성만 미리 해놓음 -->
     </div>
-    <br>
- 
-  </nav>
 
-  <main class="SearchContainer">
-    <div class="search card card-body bg-light">
-      <h1 class="title">Search Github Users</h1>
-      <p class="description">Enter a Username to fetch a user profile and repos</p>
-      <input type="text" id="searchUser" class="form-control" placeholder="input">
-    </div>
-    <br>
-    <div id="profile"></div>
-  </main>
-
-  <footer class="mt-5 p-3 text-center bg-light text-muted">Github Finder &copy; </footer>
-  <!-- footer 부분 생성 이고 &copy는 copyright 문자를 출력하기 위해서 &copy == entity라고 부름. -->
-
-   <!-- Scripts -->
-   <script src="script.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-   <!-- 부트스트랩 Java script 로  연결하기. .  -->
+    <footer class="mt-5 p-3 text-center bg-light text-muted">Github Finder &copy; toni</footer> <!-- entity 태그임 &copy = copyright를 띄워주는 부분임.-->
+    <!--footer class 뒤의 부분은 실제로 class의 속성이 되는 부분을 말함. -->    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
